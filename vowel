@@ -1,0 +1,28 @@
+str=input("ENTER THE SENTENCE:")
+a=str.upper()
+tmp=""
+new=[]
+count=0
+last=a[len(a)-1]
+if(last == '.' or last == '?' or last == '!'):
+    for i in a:
+        if i==" " and (last == '.' or last == '?' or last == '!'):
+            new.append(tmp)
+            tmp=""
+        else:
+            tmp=tmp+i
+    print("WORDS BEGINNING AND ENDING WITH A VOWELS ARE:->")
+    newstring= ''
+    for word in new:
+        if (word[0] in ['a','e','i','o','u','A','E','I','O','U']
+        and word[len(word)-1] in ['a','e','i','o','u','A','E','I','O','U']):
+              print(word)
+              count=count+1
+    print("NUMBER OF WORDS BEGINNING AND ENDING WITH A VOWEL = ",count)
+else:
+    print("Invalid input")
+    
+        
+   
+
+
